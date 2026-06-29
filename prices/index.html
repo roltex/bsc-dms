@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSC BPA — Pricing Plans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/prices/style.css?v=3">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">BSC <span>BPA</span></a>
+    <nav class="header-nav">
+      <a href="#plans">Plans</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#features">Features</a>
+      <a href="#services">Services</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="#plans" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Enterprise Document &amp; Workflow Management for Modern Business</div>
+    <h1>Simple, transparent pricing<br>for every team size</h1>
+    <p class="hero-sub">From startups to enterprises — choose the plan that fits your workflow.<br>Start free, scale as you grow. <strong>10% off on annual plans.</strong></p>
+    <div class="billing-toggle">
+      <span class="billing-label" id="lbl-monthly">Monthly</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="billing-toggle" onchange="toggleBilling()">
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="billing-label" id="lbl-annual">Annual <span class="save-badge">Save 10%</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="plans-section" id="plans">
+  <div class="container">
+    <div class="plans-grid plans-grid-3">
+
+      <!-- BASE -->
+      <div class="plan-card">
+        <div class="plan-header">
+          <div class="plan-icon plan-icon-starter"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3>Base</h3>
+          <p class="plan-desc">For small teams getting started with document management</p>
+        </div>
+        <div class="plan-price"><span class="price monthly-price">€150</span><span class="price annual-price" style="display:none">€135</span><span class="price-period">/month</span></div>
+        <div class="plan-annual-note monthly-price">€1,800/year</div>
+        <div class="plan-annual-note annual-price" style="display:none">Billed €1,620/year</div>
+        <a href="#" class="btn btn-outline btn-full">Start Free Trial</a>
+        <ul class="plan-features">
+          <li class="feature-group-label">Limits</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>20</strong> users</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>5</strong> workflows &middot; <strong>10</strong> templates</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>1,000</strong> docs/mo &middot; <strong>100</strong> signatures/mo</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>2,000</strong> API calls/mo &middot; <strong>5 GB</strong> storage</li>
+          <li class="feature-group-label">Features</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Simple workflow &amp; templates</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>E-signature on PDF</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Partner portal &amp; notifications</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Archive &amp; search</li>
+          <li class="feature-na"><svg class="x-icon" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg>No advanced workflows</li>
+          <li class="feature-na"><svg class="x-icon" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg>No AI or API integrations</li>
+        </ul>
+      </div>
+
+      <!-- PRO -->
+      <div class="plan-card plan-card-popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-header">
+          <div class="plan-icon plan-icon-business"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/></svg></div>
+          <h3>Pro</h3>
+          <p class="plan-desc">Advanced workflows, API integration, and audit for growing teams</p>
+        </div>
+        <div class="plan-price"><span class="price monthly-price">€300</span><span class="price annual-price" style="display:none">€270</span><span class="price-period">/month</span></div>
+        <div class="plan-annual-note monthly-price">€3,600/year</div>
+        <div class="plan-annual-note annual-price" style="display:none">Billed €3,240/year</div>
+        <a href="#" class="btn btn-primary btn-full">Start Free Trial</a>
+        <ul class="plan-features">
+          <li class="feature-group-label">Limits</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>50</strong> users</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>20</strong> workflows &middot; <strong>50</strong> templates</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>5,000</strong> docs/mo &middot; <strong>1,000</strong> signatures/mo</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>10,000</strong> API calls/mo &middot; <strong>20 GB</strong> storage</li>
+          <li class="feature-group-label">Everything in Base +</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Advanced workflows &amp; templates</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>API manual integration</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Basic audit trail</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>AI Chat &amp; Document Analysis</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Google Docs integration</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Partner CRM &amp; KYC</li>
+        </ul>
+      </div>
+
+      <!-- BUSINESS -->
+      <div class="plan-card plan-card-business">
+        <div class="plan-header">
+          <div class="plan-icon plan-icon-enterprise"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h3>Business</h3>
+          <p class="plan-desc">Full platform with ERP sync, full audit, and enterprise-grade features</p>
+        </div>
+        <div class="plan-price"><span class="price monthly-price">€600</span><span class="price annual-price" style="display:none">€540</span><span class="price-period">/month</span></div>
+        <div class="plan-annual-note monthly-price">€7,200/year</div>
+        <div class="plan-annual-note annual-price" style="display:none">Billed €6,480/year</div>
+        <a href="#" class="btn btn-outline btn-full">Start Free Trial</a>
+        <ul class="plan-features">
+          <li class="feature-group-label">Limits</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>100</strong> users</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>100</strong> workflows &middot; <strong>200</strong> templates</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>20,000</strong> docs/mo &middot; <strong>2,000</strong> signatures/mo</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><strong>100,000</strong> API calls/mo &middot; <strong>100 GB</strong> storage</li>
+          <li class="feature-group-label">Everything in Pro +</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Advanced templates</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>API ERP Sync/Exchange Ready</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Full audit trail</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>AI Workflow Builder &amp; Actionable AI</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>ERP integration</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>PDF protection &amp; Custom branding</li>
+          <li><svg class="check" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Priority support (included)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="onprem-banner">
+      <div class="onprem-inner">
+        <div class="onprem-text">
+          <div class="onprem-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          <div>
+            <h4>On-Premise Deployment</h4>
+            <p>Deploy on your own infrastructure. All advanced features, unlimited workflows and templates.</p>
+          </div>
+        </div>
+        <div class="onprem-pricing">
+          <div class="onprem-range"><span class="onprem-label">From</span> <span class="onprem-price">€875</span> <span class="onprem-label">to</span> <span class="onprem-price">€1,800</span> <span class="onprem-period">/month</span></div>
+          <div class="onprem-detail">500 to unlimited users &middot; Annual from €9,450 to €19,440</div>
+          <a href="#" class="btn btn-dark btn-sm">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Professional Services</h2>
+      <p>One-time implementation &amp; integration fees, plus optional ongoing support packages.</p>
+    </div>
+    <div class="services-two-col">
+      <div class="service-card service-card-accent">
+        <div class="service-badge">One-Time</div>
+        <h4>Implementation</h4>
+        <p class="service-desc">Full deployment, configuration, data migration, custom templates, workflows, and team training.</p>
+        <div class="service-range">
+          <div class="service-range-item"><span class="service-range-label">Standard</span><span class="service-range-days">~40 days</span><div class="service-range-prices"><span class="service-price-original">€18,000</span><span class="service-price-final">€14,400</span></div></div>
+          <div class="service-range-divider"></div>
+          <div class="service-range-item"><span class="service-range-label">Enterprise</span><span class="service-range-days">~60 days</span><div class="service-range-prices"><span class="service-price-original">€27,000</span><span class="service-price-final">€21,600</span></div></div>
+        </div>
+        <div class="service-note">20% discount applied. Includes setup, migration, training &amp; go-live.</div>
+      </div>
+      <div class="service-card service-card-accent2">
+        <div class="service-badge">One-Time</div>
+        <h4>Integration</h4>
+        <p class="service-desc">Connect BSC BPA to your existing systems — ERP, Google, SAP, SSO, and more.</p>
+        <div class="service-range">
+          <div class="service-range-item"><span class="service-range-label">Standard</span><span class="service-range-days">~10 days</span><div class="service-range-prices"><span class="service-price-original">€4,500</span><span class="service-price-final">€3,600</span></div></div>
+          <div class="service-range-divider"></div>
+          <div class="service-range-item"><span class="service-range-label">Enterprise</span><span class="service-range-days">~20 days</span><div class="service-range-prices"><span class="service-price-original">€9,000</span><span class="service-price-final">€7,200</span></div></div>
+        </div>
+        <div class="service-note">20% discount applied. Covers Google, SAP, ERP, SSO connectors.</div>
+      </div>
+    </div>
+    <div class="section-subheader"><h3>Support Plans</h3><p>Optional ongoing support packages billed monthly.</p></div>
+    <div class="support-grid">
+      <div class="support-card"><h4>Basic</h4><div class="support-price">€300<span>/mo</span></div><div class="support-annual">€3,600/year</div><ul><li>Email support (48h response)</li><li>Business hours coverage</li><li>Knowledge base access</li></ul></div>
+      <div class="support-card support-card-highlight"><h4>Standard</h4><div class="support-price">€450<span>/mo</span></div><div class="support-annual">€5,400/year</div><ul><li>Email + chat support (24h)</li><li>Extended hours coverage</li><li>Quarterly health checks</li><li>1 included service/year</li></ul></div>
+      <div class="support-card"><h4>Premium</h4><div class="support-price">€900<span>/mo</span></div><div class="support-annual">€10,800/year</div><ul><li>Priority support (4h response)</li><li>24/7 coverage</li><li>Dedicated account manager</li><li>Monthly health checks</li><li>SLA 99.9% uptime guarantee</li></ul></div>
+    </div>
+    <div class="section-subheader"><h3>Add-Ons</h3><p>Extend your plan with additional services and capacity.</p></div>
+    <div class="addons-grid">
+      <div class="addon-card"><div class="addon-price">€225<span>/mo</span></div><div class="addon-name">ERP Data Sync</div><div class="addon-detail">€2,430/yr (10% off)</div></div>
+      <div class="addon-card"><div class="addon-price">€450<span>/mo</span></div><div class="addon-name">ERP Doc Exchange</div><div class="addon-detail">€4,860/yr (10% off)</div></div>
+      <div class="addon-card"><div class="addon-price">€0.20<span>/each</span></div><div class="addon-name">Extra Signature</div><div class="addon-detail">Over quota per-sign</div></div>
+      <div class="addon-card"><div class="addon-price">€2–4<span>/user</span></div><div class="addon-name">Extra Users</div><div class="addon-detail">Base €4 / Pro €3 / Biz €2</div></div>
+      <div class="addon-card"><div class="addon-price">€5<span>/10GB</span></div><div class="addon-name">Extra Storage</div><div class="addon-detail">Per 10 GB block</div></div>
+      <div class="addon-card"><div class="addon-price">€10<span>/10K</span></div><div class="addon-name">Extra API Calls</div><div class="addon-detail">Per 10,000 calls</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="total-cost-section">
+  <div class="container">
+    <div class="section-header"><h2>Total Cost Overview</h2><p>One-time setup + annual subscription. Integration is a one-time investment.</p></div>
+    <div class="cost-table-wrapper">
+      <table class="cost-table">
+        <thead><tr><th>Plan</th><th>Monthly</th><th>Annual</th><th>Annual (10% off)</th><th>Implementation</th><th>Integration</th></tr></thead>
+        <tbody>
+          <tr><td><span class="plan-tag tag-base">Base</span></td><td>€150</td><td>€1,800</td><td class="cost-highlight">€1,620</td><td rowspan="2" class="cost-impl">€14,400 – €21,600</td><td rowspan="2" class="cost-impl">€3,600 – €7,200</td></tr>
+          <tr><td><span class="plan-tag tag-pro">Pro</span></td><td>€300</td><td>€3,600</td><td class="cost-highlight">€3,240</td></tr>
+          <tr><td><span class="plan-tag tag-business">Business</span></td><td>€600</td><td>€7,200</td><td class="cost-highlight">€6,480</td><td class="cost-impl">€14,400 – €21,600</td><td class="cost-impl">€3,600 – €7,200</td></tr>
+          <tr><td><span class="plan-tag tag-onprem">On-Prem</span></td><td>€875 – €1,800</td><td>€10,500 – €21,600</td><td class="cost-highlight">€9,450 – €19,440</td><td>Included</td><td>Included</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="calculator-section" id="calculator">
+  <div class="container">
+    <div class="section-header">
+      <h2>Price Calculator</h2>
+      <p>Configure your ideal setup and see real-time cost breakdown.</p>
+    </div>
+    <div class="calc-layout">
+      <div class="calc-config">
+
+        <div class="calc-card">
+          <h4 class="calc-card-title"><span class="calc-step">1</span> Choose Your Plan</h4>
+          <div class="calc-plan-selector">
+            <label class="calc-plan-option">
+              <input type="radio" name="calc-plan" value="base" checked>
+              <div class="calc-plan-box">
+                <span class="calc-plan-name">Base</span>
+                <span class="calc-plan-price-tag">€150<small>/mo</small></span>
+                <span class="calc-plan-users">Up to 20 users</span>
+              </div>
+            </label>
+            <label class="calc-plan-option">
+              <input type="radio" name="calc-plan" value="pro">
+              <div class="calc-plan-box">
+                <span class="calc-plan-badge">Popular</span>
+                <span class="calc-plan-name">Pro</span>
+                <span class="calc-plan-price-tag">€300<small>/mo</small></span>
+                <span class="calc-plan-users">Up to 50 users</span>
+              </div>
+            </label>
+            <label class="calc-plan-option">
+              <input type="radio" name="calc-plan" value="business">
+              <div class="calc-plan-box">
+                <span class="calc-plan-name">Business</span>
+                <span class="calc-plan-price-tag">€600<small>/mo</small></span>
+                <span class="calc-plan-users">Up to 100 users</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc-card">
+          <h4 class="calc-card-title"><span class="calc-step">2</span> Billing Period</h4>
+          <div class="calc-toggle-row">
+            <label class="calc-toggle-option">
+              <input type="radio" name="calc-billing" value="monthly" checked>
+              <div class="calc-toggle-box">
+                <span class="calc-toggle-label">Monthly</span>
+                <span class="calc-toggle-desc">Pay as you go</span>
+              </div>
+            </label>
+            <label class="calc-toggle-option">
+              <input type="radio" name="calc-billing" value="annual">
+              <div class="calc-toggle-box">
+                <span class="calc-toggle-label">Annual</span>
+                <span class="calc-toggle-desc">Save 10% &middot; billed yearly</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc-card">
+          <h4 class="calc-card-title"><span class="calc-step">3</span> Extra Capacity</h4>
+          <div class="calc-sliders">
+            <div class="calc-slider-row">
+              <div class="calc-slider-info">
+                <span class="calc-slider-label">Extra Users</span>
+                <span class="calc-slider-value" id="calc-users-val">0</span>
+              </div>
+              <input type="range" id="calc-users" min="0" max="200" step="5" value="0" class="calc-range">
+              <div class="calc-slider-meta">
+                <span>0</span>
+                <span class="calc-slider-rate">Base €4 / Pro €3 / Biz €2 per user</span>
+                <span>200</span>
+              </div>
+            </div>
+            <div class="calc-slider-row">
+              <div class="calc-slider-info">
+                <span class="calc-slider-label">Extra Storage</span>
+                <span class="calc-slider-value" id="calc-storage-val">0 GB</span>
+              </div>
+              <input type="range" id="calc-storage" min="0" max="500" step="10" value="0" class="calc-range">
+              <div class="calc-slider-meta">
+                <span>0 GB</span>
+                <span class="calc-slider-rate">€5 per 10 GB</span>
+                <span>500 GB</span>
+              </div>
+            </div>
+            <div class="calc-slider-row">
+              <div class="calc-slider-info">
+                <span class="calc-slider-label">Extra API Calls</span>
+                <span class="calc-slider-value" id="calc-api-val">0</span>
+              </div>
+              <input type="range" id="calc-api" min="0" max="100000" step="10000" value="0" class="calc-range">
+              <div class="calc-slider-meta">
+                <span>0</span>
+                <span class="calc-slider-rate">€10 per 10,000 calls</span>
+                <span>100K</span>
+              </div>
+            </div>
+            <div class="calc-slider-row">
+              <div class="calc-slider-info">
+                <span class="calc-slider-label">Extra Signatures</span>
+                <span class="calc-slider-value" id="calc-sigs-val">0</span>
+              </div>
+              <input type="range" id="calc-sigs" min="0" max="5000" step="100" value="0" class="calc-range">
+              <div class="calc-slider-meta">
+                <span>0</span>
+                <span class="calc-slider-rate">€0.20 per signature</span>
+                <span>5,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-card">
+          <h4 class="calc-card-title"><span class="calc-step">4</span> Add-Ons</h4>
+          <div class="calc-addons-list">
+            <label class="calc-addon-item">
+              <input type="checkbox" id="calc-erp-sync" value="erp-sync">
+              <div class="calc-addon-box">
+                <div class="calc-addon-info"><span class="calc-addon-name">ERP Data Sync</span><span class="calc-addon-desc">Synchronize data with your ERP</span></div>
+                <span class="calc-addon-price">€225/mo</span>
+              </div>
+            </label>
+            <label class="calc-addon-item">
+              <input type="checkbox" id="calc-erp-doc" value="erp-doc">
+              <div class="calc-addon-box">
+                <div class="calc-addon-info"><span class="calc-addon-name">ERP Doc Exchange</span><span class="calc-addon-desc">Full document exchange with ERP</span></div>
+                <span class="calc-addon-price">€450/mo</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc-card">
+          <h4 class="calc-card-title"><span class="calc-step">5</span> Support Plan</h4>
+          <div class="calc-support-selector">
+            <label class="calc-support-option">
+              <input type="radio" name="calc-support" value="none" checked>
+              <div class="calc-support-box"><span class="calc-support-name">No Support</span><span class="calc-support-price">€0</span></div>
+            </label>
+            <label class="calc-support-option">
+              <input type="radio" name="calc-support" value="basic">
+              <div class="calc-support-box"><span class="calc-support-name">Basic</span><span class="calc-support-price">€300/mo</span><span class="calc-support-desc">Email, 48h response</span></div>
+            </label>
+            <label class="calc-support-option">
+              <input type="radio" name="calc-support" value="standard">
+              <div class="calc-support-box"><span class="calc-support-name">Standard</span><span class="calc-support-price">€450/mo</span><span class="calc-support-desc">Email + chat, 24h</span></div>
+            </label>
+            <label class="calc-support-option">
+              <input type="radio" name="calc-support" value="premium">
+              <div class="calc-support-box"><span class="calc-support-name">Premium</span><span class="calc-support-price">€900/mo</span><span class="calc-support-desc">Priority, 4h, 24/7</span></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc-card">
+          <h4 class="calc-card-title"><span class="calc-step">6</span> Professional Services <span class="calc-onetime-badge">One-Time</span></h4>
+          <div class="calc-services-grid">
+            <div class="calc-service-group">
+              <span class="calc-service-heading">Implementation</span>
+              <label class="calc-service-option">
+                <input type="radio" name="calc-impl" value="none" checked>
+                <div class="calc-service-box"><span>None</span><span class="calc-svc-price">€0</span></div>
+              </label>
+              <label class="calc-service-option">
+                <input type="radio" name="calc-impl" value="standard">
+                <div class="calc-service-box"><span>Standard (~40 days)</span><span class="calc-svc-price">€14,400</span></div>
+              </label>
+              <label class="calc-service-option">
+                <input type="radio" name="calc-impl" value="enterprise">
+                <div class="calc-service-box"><span>Enterprise (~60 days)</span><span class="calc-svc-price">€21,600</span></div>
+              </label>
+            </div>
+            <div class="calc-service-group">
+              <span class="calc-service-heading">Integration</span>
+              <label class="calc-service-option">
+                <input type="radio" name="calc-integ" value="none" checked>
+                <div class="calc-service-box"><span>None</span><span class="calc-svc-price">€0</span></div>
+              </label>
+              <label class="calc-service-option">
+                <input type="radio" name="calc-integ" value="standard">
+                <div class="calc-service-box"><span>Standard (~10 days)</span><span class="calc-svc-price">€3,600</span></div>
+              </label>
+              <label class="calc-service-option">
+                <input type="radio" name="calc-integ" value="enterprise">
+                <div class="calc-service-box"><span>Enterprise (~20 days)</span><span class="calc-svc-price">€7,200</span></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="calc-summary-wrapper">
+        <div class="calc-summary" id="calc-summary">
+          <h4 class="calc-summary-title">Your Estimate</h4>
+          <div class="calc-summary-plan-badge" id="calc-sum-plan-badge">Base</div>
+
+          <div class="calc-summary-section">
+            <div class="calc-sum-row"><span>Plan</span><span id="calc-sum-plan">€150</span></div>
+            <div class="calc-sum-row" id="calc-sum-discount-row" style="display:none"><span>Annual discount (10%)</span><span class="calc-sum-discount" id="calc-sum-discount">-€15</span></div>
+            <div class="calc-sum-row" id="calc-sum-users-row" style="display:none"><span>Extra users (<span id="calc-sum-users-qty">0</span>)</span><span id="calc-sum-users">€0</span></div>
+            <div class="calc-sum-row" id="calc-sum-storage-row" style="display:none"><span>Extra storage (<span id="calc-sum-storage-qty">0 GB</span>)</span><span id="calc-sum-storage">€0</span></div>
+            <div class="calc-sum-row" id="calc-sum-api-row" style="display:none"><span>Extra API (<span id="calc-sum-api-qty">0</span>)</span><span id="calc-sum-api">€0</span></div>
+            <div class="calc-sum-row" id="calc-sum-sigs-row" style="display:none"><span>Extra signatures (<span id="calc-sum-sigs-qty">0</span>)</span><span id="calc-sum-sigs">€0</span></div>
+            <div class="calc-sum-row" id="calc-sum-erp-sync-row" style="display:none"><span>ERP Data Sync</span><span id="calc-sum-erp-sync">€225</span></div>
+            <div class="calc-sum-row" id="calc-sum-erp-doc-row" style="display:none"><span>ERP Doc Exchange</span><span id="calc-sum-erp-doc">€450</span></div>
+            <div class="calc-sum-row" id="calc-sum-support-row" style="display:none"><span>Support (<span id="calc-sum-support-name">Basic</span>)</span><span id="calc-sum-support">€300</span></div>
+          </div>
+
+          <div class="calc-summary-divider"></div>
+          <div class="calc-sum-total-row"><span>Monthly Total</span><span class="calc-sum-total" id="calc-sum-monthly">€150</span></div>
+          <div class="calc-sum-total-row calc-sum-annual-row"><span>Annual Total</span><span class="calc-sum-total-annual" id="calc-sum-annual">€1,800</span></div>
+
+          <div class="calc-summary-divider" id="calc-onetime-divider" style="display:none"></div>
+          <div class="calc-summary-section" id="calc-onetime-section" style="display:none">
+            <div class="calc-sum-onetime-label">One-Time Costs</div>
+            <div class="calc-sum-row" id="calc-sum-impl-row" style="display:none"><span>Implementation</span><span id="calc-sum-impl">€0</span></div>
+            <div class="calc-sum-row" id="calc-sum-integ-row" style="display:none"><span>Integration</span><span id="calc-sum-integ">€0</span></div>
+            <div class="calc-sum-total-row"><span>One-Time Total</span><span class="calc-sum-total" id="calc-sum-onetime">€0</span></div>
+          </div>
+
+          <div class="calc-summary-divider"></div>
+          <div class="calc-sum-grand">
+            <span>First Year Total</span>
+            <span class="calc-sum-grand-total" id="calc-sum-first-year">€1,800</span>
+          </div>
+          <div class="calc-sum-note">All prices excl. VAT</div>
+
+          <a href="#" class="btn btn-primary btn-full calc-sum-cta">Get Started</a>
+          <a href="#" class="btn btn-outline btn-full calc-sum-cta-secondary">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="comparison-section" id="features">
+  <div class="container">
+    <div class="section-header"><h2>Full Feature Comparison</h2><p>Every feature mapped to every plan. No surprises.</p></div>
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead><tr><th class="feature-col">Feature</th><th>Base</th><th class="col-popular">Pro</th><th>Business</th></tr></thead>
+        <tbody>
+          <tr class="group-row"><td colspan="4">Limits</td></tr>
+          <tr><td>Users</td><td>20</td><td>50</td><td>100</td></tr>
+          <tr><td>Workflows</td><td>5</td><td>20</td><td>100</td></tr>
+          <tr><td>Document templates</td><td>10</td><td>50</td><td>200</td></tr>
+          <tr><td>Documents / month</td><td>1,000</td><td>5,000</td><td>20,000</td></tr>
+          <tr><td>Signatures / month</td><td>100</td><td>1,000</td><td>2,000</td></tr>
+          <tr><td>API calls / month</td><td>2,000</td><td>10,000</td><td>100,000</td></tr>
+          <tr><td>Storage</td><td>5 GB</td><td>20 GB</td><td>100 GB</td></tr>
+          <tr class="group-row"><td colspan="4">Workflow &amp; Templates</td></tr>
+          <tr><td>Simple workflow</td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>Advanced workflow</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>Visual Workflow Builder</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>AI Workflow Builder</td><td><span class="t-no">&mdash;</span></td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr class="group-row"><td colspan="4">Documents &amp; Signatures</td></tr>
+          <tr><td>PDF preview &amp; download</td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>E-signature on PDF</td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>Google Docs editing</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>PDF password protection</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr class="group-row"><td colspan="4">Integrations</td></tr>
+          <tr><td>API manual integration</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>API ERP Sync/Exchange</td><td><span class="t-no">&mdash;</span></td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>ERP integration</td><td><span class="t-no">&mdash;</span></td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr class="group-row"><td colspan="4">AI Features</td></tr>
+          <tr><td>AI Chat Assistant</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>AI Document Analysis</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>Actionable AI (task creation)</td><td><span class="t-no">&mdash;</span></td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr class="group-row"><td colspan="4">Audit &amp; Compliance</td></tr>
+          <tr><td>Basic audit</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>Full audit trail</td><td><span class="t-no">&mdash;</span></td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+          <tr><td>Custom branding</td><td><span class="t-no">&mdash;</span></td><td><span class="t-yes">&#10003;</span></td><td><span class="t-yes">&#10003;</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><span class="logo">BSC <span>BPA</span></span><p>Business Process Management System</p></div>
+    <div class="footer-links"><a href="#plans">Plans</a><a href="#features">Features</a><a href="#services">Services</a></div>
+    <div class="footer-copy">&copy; 2026 BSC BPA. All rights reserved. All prices excl. VAT.</div>
+  </div>
+</footer>
+
+<script>
+function toggleTheme() {
+  document.documentElement.classList.toggle('dark');
+  localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+}
+if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark');
+}
+function toggleBilling() {
+  const annual = document.getElementById('billing-toggle').checked;
+  document.querySelectorAll('.monthly-price').forEach(el => el.style.display = annual ? 'none' : '');
+  document.querySelectorAll('.annual-price').forEach(el => el.style.display = annual ? '' : 'none');
+  document.getElementById('lbl-monthly').classList.toggle('active', !annual);
+  document.getElementById('lbl-annual').classList.toggle('active', annual);
+}
+document.getElementById('lbl-monthly').classList.add('active');
+
+/* ===== Price Calculator ===== */
+(function() {
+  const PLANS = {
+    base:     { monthly: 150, users: 20, userCost: 4, label: 'Base' },
+    pro:      { monthly: 300, users: 50, userCost: 3, label: 'Pro' },
+    business: { monthly: 600, users: 100, userCost: 2, label: 'Business' }
+  };
+  const SUPPORT = { none: 0, basic: 300, standard: 450, premium: 900 };
+  const SUPPORT_NAMES = { none: 'None', basic: 'Basic', standard: 'Standard', premium: 'Premium' };
+  const ADDONS = { 'erp-sync': 225, 'erp-doc': 450 };
+  const IMPL = { none: 0, standard: 14400, enterprise: 21600 };
+  const INTEG = { none: 0, standard: 3600, enterprise: 7200 };
+  const ANNUAL_DISCOUNT = 0.10;
+
+  function val(id) { return document.getElementById(id); }
+  function checked(name) { return document.querySelector('input[name="'+name+'"]:checked').value; }
+  function fmt(n) {
+    if (n >= 1000) return '€' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+    if (n % 1 !== 0) return '€' + n.toFixed(2);
+    return '€' + n;
+  }
+
+  function showRow(id, show) {
+    var el = val(id);
+    if (el) el.style.display = show ? '' : 'none';
+  }
+
+  function calculate() {
+    var plan = checked('calc-plan');
+    var billing = checked('calc-billing');
+    var p = PLANS[plan];
+    var isAnnual = billing === 'annual';
+
+    var extraUsers = parseInt(val('calc-users').value) || 0;
+    var extraStorage = parseInt(val('calc-storage').value) || 0;
+    var extraApi = parseInt(val('calc-api').value) || 0;
+    var extraSigs = parseInt(val('calc-sigs').value) || 0;
+
+    val('calc-users-val').textContent = extraUsers;
+    val('calc-storage-val').textContent = extraStorage + ' GB';
+    val('calc-api-val').textContent = extraApi.toLocaleString();
+    val('calc-sigs-val').textContent = extraSigs.toLocaleString();
+
+    var planCost = p.monthly;
+    var usersCost = extraUsers * p.userCost;
+    var storageCost = Math.ceil(extraStorage / 10) * 5;
+    var apiCost = Math.ceil(extraApi / 10000) * 10;
+    var sigsCost = extraSigs * 0.20;
+
+    var erpSync = val('calc-erp-sync').checked;
+    var erpDoc = val('calc-erp-doc').checked;
+    var erpSyncCost = erpSync ? ADDONS['erp-sync'] : 0;
+    var erpDocCost = erpDoc ? ADDONS['erp-doc'] : 0;
+
+    var support = checked('calc-support');
+    var supportCost = SUPPORT[support];
+
+    var impl = checked('calc-impl');
+    var integ = checked('calc-integ');
+    var implCost = IMPL[impl];
+    var integCost = INTEG[integ];
+
+    var subtotalMonthly = planCost + usersCost + storageCost + apiCost + sigsCost + erpSyncCost + erpDocCost + supportCost;
+    var discountAmount = isAnnual ? subtotalMonthly * ANNUAL_DISCOUNT : 0;
+    var monthlyAfterDiscount = subtotalMonthly - discountAmount;
+    var annualTotal = monthlyAfterDiscount * 12;
+    var onetimeTotal = implCost + integCost;
+    var firstYear = annualTotal + onetimeTotal;
+
+    val('calc-sum-plan-badge').textContent = p.label + (isAnnual ? ' · Annual' : ' · Monthly');
+    val('calc-sum-plan').textContent = fmt(planCost);
+
+    showRow('calc-sum-discount-row', isAnnual);
+    if (isAnnual) val('calc-sum-discount').textContent = '-' + fmt(discountAmount);
+
+    showRow('calc-sum-users-row', extraUsers > 0);
+    if (extraUsers > 0) {
+      val('calc-sum-users-qty').textContent = extraUsers;
+      val('calc-sum-users').textContent = fmt(usersCost);
+    }
+    showRow('calc-sum-storage-row', extraStorage > 0);
+    if (extraStorage > 0) {
+      val('calc-sum-storage-qty').textContent = extraStorage + ' GB';
+      val('calc-sum-storage').textContent = fmt(storageCost);
+    }
+    showRow('calc-sum-api-row', extraApi > 0);
+    if (extraApi > 0) {
+      val('calc-sum-api-qty').textContent = extraApi.toLocaleString();
+      val('calc-sum-api').textContent = fmt(apiCost);
+    }
+    showRow('calc-sum-sigs-row', extraSigs > 0);
+    if (extraSigs > 0) {
+      val('calc-sum-sigs-qty').textContent = extraSigs.toLocaleString();
+      val('calc-sum-sigs').textContent = fmt(sigsCost);
+    }
+
+    showRow('calc-sum-erp-sync-row', erpSync);
+    showRow('calc-sum-erp-doc-row', erpDoc);
+    if (erpSync) val('calc-sum-erp-sync').textContent = fmt(erpSyncCost);
+    if (erpDoc) val('calc-sum-erp-doc').textContent = fmt(erpDocCost);
+
+    showRow('calc-sum-support-row', support !== 'none');
+    if (support !== 'none') {
+      val('calc-sum-support-name').textContent = SUPPORT_NAMES[support];
+      val('calc-sum-support').textContent = fmt(supportCost);
+    }
+
+    val('calc-sum-monthly').textContent = fmt(Math.round(monthlyAfterDiscount));
+    val('calc-sum-annual').textContent = fmt(Math.round(annualTotal));
+
+    var hasOnetime = onetimeTotal > 0;
+    showRow('calc-onetime-divider', hasOnetime);
+    showRow('calc-onetime-section', hasOnetime);
+    showRow('calc-sum-impl-row', implCost > 0);
+    showRow('calc-sum-integ-row', integCost > 0);
+    if (implCost > 0) val('calc-sum-impl').textContent = fmt(implCost);
+    if (integCost > 0) val('calc-sum-integ').textContent = fmt(integCost);
+    val('calc-sum-onetime').textContent = fmt(onetimeTotal);
+
+    val('calc-sum-first-year').textContent = fmt(Math.round(firstYear));
+
+    updateSliderFills();
+  }
+
+  function updateSliderFills() {
+    document.querySelectorAll('.calc-range').forEach(function(range) {
+      var pct = ((range.value - range.min) / (range.max - range.min)) * 100;
+      range.style.background = 'linear-gradient(to right, var(--blue-600) 0%, var(--blue-600) ' + pct + '%, var(--border) ' + pct + '%, var(--border) 100%)';
+    });
+  }
+
+  document.querySelectorAll(
+    'input[name="calc-plan"], input[name="calc-billing"], input[name="calc-support"], ' +
+    'input[name="calc-impl"], input[name="calc-integ"], #calc-erp-sync, #calc-erp-doc, ' +
+    '#calc-users, #calc-storage, #calc-api, #calc-sigs'
+  ).forEach(function(el) {
+    el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
+  });
+
+  calculate();
+})();
+</script>
+</body>
+</html>

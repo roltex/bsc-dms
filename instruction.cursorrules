@@ -1,0 +1,158 @@
+SYSTEM (PROGRAM) FOR AUTOMATING DOCUMENT MANAGEMENT IN EFES KAZAKHSTAN
+Purpose:
+To obtain a simple and intuitive electronic document management that will ensure the process of preparing, approving, recording, and storing (archiving) supplier contracts, appendices, services contract, powers of attorney, labels, bank guarantees, the Company's licenses and permits, the founding documents of partners, lawsuits, claims, and materials from inspections by government agencies, other documents.
+•	Objective:
+•	Speed up and simplify the process of preparing and approving Documents;
+•	Implement Electronical Signature  functionality for signing documents within the system;
+•	Provide centralized storage and fast access to scanned  copies of  Documents - supplier contracts, appendices, services contract, powers of attorney, labels, bank guarantees, the Company's licenses and permits, the founding documents of partners, lawsuits, claims.
+•	Implement document analysis and verification using AI tool ;
+•	Migrate all necessary documents, as well as the client database (current partners), from the DocLogix system;
+•	Provide integration between the document management system and other Company applications such as government  ADATA, Paragraph, etc.
+•	
+General System Requirements:
+1)	Ensure processes for reviewing, approving, and storing documents;
+2)	Maintain history of all actions related to uploading, reviewing, approving, and versioning documents;
+3)	Maintain a unified client database with statutory and other documents uploaded;
+4)	Provide a “blacklist” of counterparties;
+5)	Set deadlines and schedules for task execution;
+6)	Provide access to Company templates for initiators;
+7)	Display active tasks with deadlines and all previously completed tasks;
+8)	Allow appointment of substitute users during employee absence;
+9)	Implement AI based document analysis and validation 
+10)	Provide electronical signature  capability;
+11)	Allow lawyers to add reviewers or delegate review
+12)	Mobile access;
+13)	Provide separate sections for uploading finalized documents without approval (licenses, court materials, corporate documents, etc.);
+14)	Provide a user manual for the system;
+15)	Ensure integration with  ADATA, Paragraph, etc.
+
+Workflow Stages:
+1. System Users and Roles
+1.1 User Roles
+•	Initiator – creates tasks and uploads documents.
+•	Manager – approves or rejects documents.
+•	Lawyer / Super User – performs detailed review, edits documents, approves, rejects, delegates, or fast tracks tasks.
+•	Administrator – configures the system, manages users and integrations.
+
+2. Creating a New Partner / Editing an Existing One
+•	The user must be able to create or edit a partner record with necessary fields (name,  banking details, email) and upload statutory documents. The system must:
+•	Alert the user if a BIN/IIN already exists;
+•	Prevent saving until all fields are completed;
+•	Automatically retrieve reliability data about the counterparty from external sources;
+A lawyer may add a counterparty to the blacklist, with a mandatory comments field explaining the reason.
+3. Creating a Task
+Document drafting may occur in two ways:
+1.	Using an approved Company template – (File of Word format);
+2.	Using a non-template (external) document (File of Word format);.
+Depending on the option selected, the approval workflow must follow either:
+•	Standard route (initiator → manager → lawyer → initiator → lawyer → manager), or
+•	Simplified route (initiator → manager).
+The system must ensure the selected route matches the document type (template / non-template).
+The system must:
+•	Allow choosing a document category (supply, services, marketing, powers of attorney, labels, bank guarantees, the Company's licenses and permits, claims, a.);
+•	Automatically route the task to the lawyer responsible for that category;
+•	Ensure required fields (partner name, commercial terms, validity period, etc.) are completed before sending for approval;
+•	Allow initiators to upload templates while protecting them from unauthorized edits except for allowed sections;
+•	Perform preliminary validation of partner data (BIN/IIN, name, bank details) and other fields (dates, amounts, recommended wording).
+
+3. Review and Approval Process
+After initiation:
+•	The manager can reject or forward the task to the lawyer;
+•	The lawyer may edit task details, documents, add reviewers, or delegate the review;
+•	The lawyer must also have AI-assisted document analysis tools;
+•	The lawyer may reject or approve the document.
+
+After approval by the lawyer and any additional reviewers, the task returns to the initiator for negotiation with the counterparty (outside the system). Once agreed:
+•	The initiator re-uploads the signed version of contract for final lawyer review;
+•	The task then returns to the manager for final approval.
+The system must:
+•	Set deadlines for all involved users with notification reminders via corporate email;
+•	Maintain full history of actions, versions, comments, timestamps;
+•	Display current approval status (who must approve, deadlines, previous versions);
+•	Support parallel and sequential approval paths.
+
+After final approval, the system must generate a protected (non-editable) version with a unique digital or graphical identifier. Word document save in PDF format automatically in system
+Lawyers must have the option to fast track the process automatically without routing to other users.
+4. Signing and Archiving
+•	After physical signing:
+•	The initiator uploads the signed document for comparison with the previously approved version (automated AI comparison recommended);
+•	The system must support digital signatures with automatic upload of the signed version into the task card;
+•	After lawyer verification, the document receives a registration number and is archived.
+The system must be able to generate Excel registries of archived documents by year, document type, etc.
+
+
+Contract Management in KZ
+
+Effective strategies for managing contracts successfully
+
+Contract Management Capabilities
+Key Categories for Supplier
+Contract Management in
+Kazakhstan
+
+#
+
+CATEGORY
+
+NEW SUPPLIER
+
+No license purchase (MS Office product -Power
+Platform
+
++
+
+Mobile application
+
++
+
+E-signature
+
++
+
+Works without platform rental
+
++
+
+EFES product ownership
+
++
+
+Trustworthiness check
+
++
+
+Data storage: SharePoint
+
++
+
+User-friendly interface
+
++
+
+AI assistant (Copilot)
+
++
+
+Prepayment
+
+–
+
+API integration with current system Doclogix
+
++
+
+#
+
+Functional Capabilities
+
+▪ Supplier reliability checking with government portal
+Migration of Counterparties from current system DocLogix
+▪ Document approval – approval route
+▪ Automatic document template selection and template matrix
+▪ Document signing using E Signature
+▪ API integration with documents from DocLogix
+▪ Substitution functionality – during the absence of the approver
+▪ Mobile version
+▪ Notifications on document status changes
+▪ Blacklist of Counterparty
+▪ Viewing archived documents

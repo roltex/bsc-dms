@@ -1,0 +1,19 @@
+<IfModule LiteSpeed>
+CacheLookup off
+</IfModule>
+
+# Force no-cache on entry points
+<FilesMatch "(index\.html|index\.php)$">
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires "0"
+</FilesMatch>
+
+# Serve static assets directly
+RewriteEngine On
+RewriteRule ^assets/.+\.(js|css|mjs|map|woff2|woff|ttf|eot|svg|png|jpg|jpeg|gif|ico|webp|json)$ - [L]
+
+# SPA fallback through PHP to bypass CDN cache
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.php [L]

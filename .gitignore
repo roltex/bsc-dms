@@ -1,0 +1,38 @@
+# Deployment secrets — DO NOT COMMIT
+DEPLOY_HANDOFF.local.md
+*.local.md
+.env
+.env.*
+!.env.example
+!.env.azure.example
+backend/.env
+backend/.env.production
+deploy.zip
+frontend-deploy.tar.gz
+backend-deploy.tar.gz
+backend-update.tar.gz
+*.tar.gz
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/vendor/
+
+# Build / cache
+frontend/dist/
+backend/storage/logs/*
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/bootstrap/cache/*.php
+!backend/bootstrap/cache/.gitignore
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# SQLite local dev
+backend/database/database.sqlite

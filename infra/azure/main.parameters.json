@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westeurope"
+    },
+    "environment": {
+      "value": "prod"
+    },
+    "baseName": {
+      "value": "efes-dms"
+    },
+    "mysqlAdminLogin": {
+      "value": "efesadmin"
+    },
+    "mysqlAdminPassword": {
+      "value": "CHANGE_ME_Strong_Password_123!"
+    },
+    "appServicePlanSku": {
+      "value": "B2"
+    },
+    "mysqlSkuName": {
+      "value": "Standard_B1ms"
+    },
+    "appUrl": {
+      "value": "https://app-efes-dms-prod.azurewebsites.net"
+    }
+  }
+}

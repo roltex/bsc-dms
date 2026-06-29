@@ -4,8 +4,8 @@
 
 param(
     [string]$ResourceGroup = "rg-efes-prod-weu",
-    [string]$WebAppName = "app-efes-dms-prod",
-    [string]$AppUrl = "https://app-efes-dms-prod.azurewebsites.net",
+    [string]$WebAppName = "bsc-dms",
+    [string]$AppUrl = "https://bsc-dms.azurewebsites.net",
     [string]$AdminEmail = "admin@bsc.ge",
     [string]$AdminPassword = "",
     [string]$AdminName = "System Administrator",
@@ -68,29 +68,32 @@ az webapp config appsettings set `
 Write-Host "Restarting web app..."
 az webapp restart --resource-group $ResourceGroup --name $WebAppName
 
-$handoff = @"
-# EFES DMS — Azure Deploy Handoff
-Generated: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
+$subscriptionId = az account show --query id -o tsv
+$portalUrl = "https://portal.azure.com/#/resource/subscriptions/$subscriptionId/resourceGroups/$ResourceGroup"
 
-## URLs
-- App: $AppUrl
-- Admin: $AppUrl/admin
-- Health: $AppUrl/api/health
-
-## Login
-- Email: $AdminEmail
-- Password: $AdminPassword
-
-## Azure Portal
-- Resource group: $ResourceGroup
-- Web app: $WebAppName
-- Portal: https://portal.azure.com/#@/resource/subscriptions/$(az account show --query id -o tsv)/resourceGroups/$ResourceGroup
-
-## APP_KEY (store securely)
-$AppKey
-
-IMPORTANT: Change the admin password after first login.
-"@
+$handoff = @(
+    "# EFES DMS - Azure Deploy Handoff"
+    "Generated: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+    ""
+    "## URLs"
+    "- App: $AppUrl"
+    "- Admin: $AppUrl/admin"
+    "- Health: $AppUrl/api/health"
+    ""
+    "## Login"
+    "- Email: $AdminEmail"
+    "- Password: $AdminPassword"
+    ""
+    "## Azure Portal"
+    "- Resource group: $ResourceGroup"
+    "- Web app: $WebAppName"
+    "- Portal: $portalUrl"
+    ""
+    "## APP_KEY - store securely"
+    $AppKey
+    ""
+    "IMPORTANT: Change the admin password after first login."
+) -join [Environment]::NewLine
 
 $handoffPath = Join-Path $PSScriptRoot "..\..\DEPLOY_HANDOFF.local.md"
 Set-Content -Path $handoffPath -Value $handoff -Encoding UTF8

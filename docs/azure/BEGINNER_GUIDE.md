@@ -15,7 +15,7 @@ For EFES DMS we use four main services:
 | **Azure Files** | Folder in the cloud for uploaded document files |
 | **Application Insights** | Error and performance monitoring |
 
-Your app URL (first launch): **https://app-efes-dms-prod.azurewebsites.net**
+Your app URL (first launch): **https://bsc-dms.azurewebsites.net**
 
 ---
 
@@ -102,7 +102,7 @@ cd infra\azure
 This takes **20–30 minutes**. It creates:
 
 - Resource group: `rg-efes-prod-weu`
-- Web app: `app-efes-dms-prod`
+- Web app: `bsc-dms`
 - MySQL database: `efes_dms`
 - File storage for documents
 - Key Vault and Application Insights
@@ -114,7 +114,7 @@ Watch progress in [Azure Portal](https://portal.azure.com) → **Resource groups
 ## Phase C — Azure Portal tour (after deploy)
 
 1. Open [https://portal.azure.com](https://portal.azure.com)
-2. Search **app-efes-dms-prod** → click the Web App
+2. Search **bsc-dms** → click the Web App
 3. Important blades:
    - **Overview** — Default URL, Restart button
    - **Configuration** — All environment variables (`APP_KEY`, database, admin bootstrap)
@@ -154,9 +154,9 @@ Repository → **Settings** → **Secrets and variables** → **Actions**:
 
 | Variable | Value |
 |---|---|
-| `AZURE_WEBAPP_NAME` | `app-efes-dms-prod` |
+| `AZURE_WEBAPP_NAME` | `bsc-dms` |
 | `AZURE_RESOURCE_GROUP` | `rg-efes-prod-weu` |
-| `AZURE_WEBAPP_HOST` | `app-efes-dms-prod.azurewebsites.net` |
+| `AZURE_WEBAPP_HOST` | `bsc-dms.azurewebsites.net` |
 
 Create a **production** environment: Settings → Environments → New → name `production`.
 
@@ -164,15 +164,15 @@ Create a **production** environment: Settings → Environments → New → name 
 
 ## Phase E — First login
 
-1. Open **https://app-efes-dms-prod.azurewebsites.net**
+1. Open **https://bsc-dms.azurewebsites.net**
 2. Log in with the admin email and password from your deploy handoff (see `DEPLOY_HANDOFF.local.md` on your machine — not in git)
-3. Admin panel: **https://app-efes-dms-prod.azurewebsites.net/admin**
+3. Admin panel: **https://bsc-dms.azurewebsites.net/admin**
 4. Configure workflows, templates, and settings in the admin UI (fresh database — no data from Hostinger)
 
 ### Health check
 
 ```powershell
-.\scripts\smoke-test.ps1 -BaseUrl https://app-efes-dms-prod.azurewebsites.net
+.\scripts\smoke-test.ps1 -BaseUrl https://bsc-dms.azurewebsites.net
 ```
 
 Or open in browser: `/api/health` — should show `"status":"ok"`.
@@ -225,16 +225,16 @@ az account show -o table
 az resource list -g rg-efes-prod-weu -o table
 
 # Restart web app
-az webapp restart -g rg-efes-prod-weu -n app-efes-dms-prod
+az webapp restart -g rg-efes-prod-weu -n bsc-dms
 
 # Stream logs
-az webapp log tail -g rg-efes-prod-weu -n app-efes-dms-prod
+az webapp log tail -g rg-efes-prod-weu -n bsc-dms
 
 # Manual deploy (without GitHub)
 cd frontend; npm ci; npm run build; cd ..
 cd backend; composer install --no-dev --optimize-autoloader; cd ..
 bash scripts/build-deploy-package.sh
-az webapp deploy -g rg-efes-prod-weu -n app-efes-dms-prod --src-path deploy.zip --type zip
+az webapp deploy -g rg-efes-prod-weu -n bsc-dms --src-path deploy.zip --type zip
 ```
 
 ---

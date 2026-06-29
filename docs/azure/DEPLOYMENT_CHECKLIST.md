@@ -44,7 +44,7 @@ Choose one: Azure Communication Services / SendGrid / SMTP
 | GitHub secret `AZURE_CLIENT_ID` | Service principal app ID |
 | GitHub secret `AZURE_TENANT_ID` | |
 | GitHub secret `AZURE_SUBSCRIPTION_ID` | |
-| GitHub variable `AZURE_WEBAPP_NAME` | e.g. `app-efes-dms-prod` |
+| GitHub variable `AZURE_WEBAPP_NAME` | `bsc-dms` |
 | GitHub variable `AZURE_RESOURCE_GROUP` | e.g. `rg-efes-prod-weu` |
 
 ## 5. Integrations (day one)

@@ -2,7 +2,7 @@
 # Post-deploy smoke tests for EFES DMS on Azure.
 set -euo pipefail
 
-BASE_URL="${1:-https://app-efes-dms-prod.azurewebsites.net}"
+BASE_URL="${1:-https://bsc-dms.azurewebsites.net}"
 BASE_URL="${BASE_URL%/}"
 
 pass=0

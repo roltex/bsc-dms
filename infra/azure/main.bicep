@@ -23,11 +23,14 @@ param mysqlSkuName string = 'Standard_B1ms'
 @description('MySQL storage size in GB')
 param mysqlStorageSizeGB int = 32
 
+@description('App Service web app name — URL becomes https://<name>.azurewebsites.net')
+param webAppName string = 'bsc-dms'
+
 @description('Application URL for CORS/Sanctum (no trailing slash)')
-param appUrl string = 'https://changeme.azurewebsites.net'
+param appUrl string = 'https://bsc-dms.azurewebsites.net'
 
 var uniqueSuffix = uniqueString(resourceGroup().id)
-var appName = 'app-${baseName}-${environment}'
+var appName = webAppName
 var planName = 'plan-${baseName}-${environment}'
 var mysqlServerName = 'mysql-${baseName}-${environment}-${uniqueSuffix}'
 var storageAccountName = take(replace('st${baseName}${environment}${uniqueSuffix}', '-', ''), 24)

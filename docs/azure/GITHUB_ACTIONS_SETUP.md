@@ -53,9 +53,9 @@ For `environment: production` in the workflow, use:
 
 | Variable | Example |
 |---|---|
-| `AZURE_WEBAPP_NAME` | `app-efes-dms-prod` |
+| `AZURE_WEBAPP_NAME` | `bsc-dms` |
 | `AZURE_RESOURCE_GROUP` | `rg-efes-prod-weu` |
-| `AZURE_WEBAPP_HOST` | `app-efes-dms-prod.azurewebsites.net` (optional) |
+| `AZURE_WEBAPP_HOST` | `bsc-dms.azurewebsites.net` (optional) |
 
 ## 5. GitHub environment
 

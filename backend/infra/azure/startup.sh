@@ -51,3 +51,8 @@ if ! pgrep -f "schedule-loop" > /dev/null 2>&1; then
 fi
 
 echo "[startup] Ready"
+
+# Hand back to Azure's default PHP/nginx startup (required on Linux App Service)
+if [ -x /opt/startup/start_script.sh ]; then
+  exec /opt/startup/start_script.sh
+fi

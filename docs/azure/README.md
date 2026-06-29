@@ -45,5 +45,5 @@
 cd frontend && npm ci && npm run build && cd ..
 cd backend && composer install --no-dev --optimize-autoloader && cd ..
 bash scripts/build-deploy-package.sh
-az webapp deploy --resource-group rg-efes-prod-weu --name app-efes-dms-prod --src-path deploy.zip --type zip
+az webapp deploy --resource-group rg-efes-prod-weu --name bsc-dms --src-path deploy.zip --type zip
 ```

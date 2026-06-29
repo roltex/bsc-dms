@@ -24,7 +24,10 @@
       "value": "Standard_B1ms"
     },
     "appUrl": {
-      "value": "https://app-efes-dms-prod.azurewebsites.net"
+      "value": "https://bsc-dms.azurewebsites.net"
+    },
+    "webAppName": {
+      "value": "bsc-dms"
     }
   }
 }

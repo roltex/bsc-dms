@@ -36,7 +36,7 @@ if ($DeployAppZip) {
     bash scripts/build-deploy-package.sh
     az webapp deploy `
         --resource-group rg-efes-prod-weu `
-        --name app-efes-dms-prod `
+        --name bsc-dms `
         --src-path deploy.zip `
         --type zip
     Pop-Location
@@ -46,5 +46,5 @@ Write-Host ""
 Write-Host "=== Done ===" -ForegroundColor Green
 Write-Host "1. Run: .\infra\azure\setup-github-oidc.ps1"
 Write-Host "2. Push code to GitHub (or use -DeployAppZip above)"
-Write-Host "3. Run: .\scripts\smoke-test.ps1 -BaseUrl https://app-efes-dms-prod.azurewebsites.net"
+Write-Host "3. Run: .\scripts\smoke-test.ps1 -BaseUrl https://bsc-dms.azurewebsites.net"
 Write-Host "4. Read: DEPLOY_HANDOFF.local.md"

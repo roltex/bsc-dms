@@ -1,6 +1,6 @@
 #Requires -Version 5.1
 param(
-    [string]$BaseUrl = "https://app-efes-dms-prod.azurewebsites.net"
+    [string]$BaseUrl = "https://bsc-dms.azurewebsites.net"
 )
 
 $BaseUrl = $BaseUrl.TrimEnd('/')

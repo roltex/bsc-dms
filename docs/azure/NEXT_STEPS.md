@@ -41,17 +41,19 @@ Add variables shown by the script under **Variables** tab.
 ## Step 3 — Verify
 
 ```powershell
-.\scripts\smoke-test.ps1 -BaseUrl https://app-efes-dms-prod.azurewebsites.net
+.\scripts\smoke-test.ps1 -BaseUrl https://bsc-dms.azurewebsites.net
 ```
 
 Open in browser:
 
-- App: https://app-efes-dms-prod.azurewebsites.net
-- Admin: https://app-efes-dms-prod.azurewebsites.net/admin
+- App: https://bsc-dms.azurewebsites.net
+- Admin: https://bsc-dms.azurewebsites.net/admin
 - Login: see `DEPLOY_HANDOFF.local.md`
 
 ---
 
 **Full beginner guide:** [BEGINNER_GUIDE.md](./BEGINNER_GUIDE.md)
+
+**Using Azure DevOps (posbsc/bsc-dms):** [AZURE_DEVOPS_SETUP.md](./AZURE_DEVOPS_SETUP.md)
 
 **Azure Portal:** https://portal.azure.com → search `rg-efes-prod-weu`
